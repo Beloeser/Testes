@@ -10,6 +10,6 @@ class Carteira:
     def sacar(self, valor):
         if valor <= 0:
             raise ValueError("O valor deve ser maior que zero")
-        if valor > self.saldo:
+        if valor < self.saldo:
             raise ValueError("Saldo insuficiente")
         self.saldo -= valor
